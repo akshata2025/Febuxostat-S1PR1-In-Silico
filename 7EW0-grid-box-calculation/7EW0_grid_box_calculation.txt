@@ -1,0 +1,113 @@
+ PyMOL(TM) 3.1.6.1 - Incentive Product
+ Copyright (C) Schrodinger, LLC
+ 
+ This Executable Build integrates and extends Open-Source PyMOL.
+ Detected OpenGL version 4.5. Shaders available.
+ Detected GLSL version 4.50.
+ OpenGL graphics engine:
+  GL_VENDOR:   Intel
+  GL_RENDERER: Intel(R) HD Graphics 620
+  GL_VERSION:  4.5.0 - Build 25.20.100.6472
+ License Expiry date: 2026-04-01
+ 
+ Detected 4 CPU cores.  Enabled multithreaded rendering.
+ 
+HEADER    MEMBRANE PROTEIN                        24-MAY-21   7EW0
+TITLE     CRYO-EM STRUCTURE OF OZANIMOD -BOUND SPHINGOSINE-1-PHOSPHATE RECEPTOR
+TITLE    2 1 IN COMPLEX WITH GI PROTEIN
+COMPND    MOL_ID: 1;
+COMPND   2 MOLECULE: GUANINE NUCLEOTIDE-BINDING PROTEIN G(I) SUBUNIT ALPHA-1;
+COMPND   3 CHAIN: A;
+COMPND   4 SYNONYM: ADENYLATE CYCLASE-INHIBITING G ALPHA PROTEIN;
+COMPND   5 ENGINEERED: YES;
+COMPND   6 MOL_ID: 2;
+COMPND   7 MOLECULE: GUANINE NUCLEOTIDE-BINDING PROTEIN G(I)/G(S)/G(T) SUBUNIT
+COMPND   8 BETA-1;
+COMPND   9 CHAIN: B;
+COMPND  10 SYNONYM: TRANSDUCIN BETA CHAIN 1;
+COMPND  11 ENGINEERED: YES;
+COMPND  12 MOL_ID: 3;
+COMPND  13 MOLECULE: GUANINE NUCLEOTIDE-BINDING PROTEIN G(I)/G(S)/G(O) SUBUNIT
+COMPND  14 GAMMA-2;
+COMPND  15 CHAIN: C;
+COMPND  16 SYNONYM: G GAMMA-I;
+COMPND  17 ENGINEERED: YES;
+COMPND  18 MOL_ID: 4;
+COMPND  19 MOLECULE: SPHINGOSINE 1-PHOSPHATE RECEPTOR 1;
+COMPND  20 CHAIN: D;
+COMPND  21 ENGINEERED: YES;
+COMPND  22 MOL_ID: 5;
+COMPND  23 MOLECULE: SCFV16;
+COMPND  24 CHAIN: E;
+COMPND  25 ENGINEERED: YES
+ ObjectMolecule: Read secondary structure assignments.
+ ObjectMolecule: Read crystal symmetry information.
+ CmdLoad: "" loaded as "7EW0".
+PyMOL>iterate hetatm, print(resn, chain, resi)
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+JEU D 401
+ Iterate: iterated over 30 atoms.
+PyMOL>select ligand, resn JEU
+ Selector: selection "ligand" defined with 30 atoms.
+PyMOL>show sticks. ligand
+
+PyMOL>get_extent ligand
+ cmd.extent: min: [ 100.837, 111.840,  67.717]
+ cmd.extent: max: [ 113.312, 113.794,  81.598]
+
+
+1. Grid Center (average of min and max)
+
+center = (min + max) / 2
+
+•	X: ((100.837 + 113.312)/2 = 107.0745)
+•	Y: ((111.840 + 113.794)/2 = 112.817)
+•	Z: ((67.717 + 81.598)/2 = 74.6575)
+
+ Grid center = (107.075, 112.817, 74.658)
+________________________________________
+2. Grid Size (max – min)
+
+•	X: (113.312 - 100.837 = 12.475)
+•	Y: (113.794 - 111.840 = 1.954)
+•	Z: (81.598 - 67.717 = 13.881)
+
+ Grid size = (12.475, 1.954, 13.881)
+________________________________________
+For docking, usually add a buffer (e.g., +5 Å) to each dimension to allow flexibility.
+So a practical grid box  be:
+
+•	Center = (107.075, 112.817, 74.658)
+•	Size (Å) = (17.5, 7.0, 19.0) (after rounding + buffer)
+________________________________________
+
+
+
