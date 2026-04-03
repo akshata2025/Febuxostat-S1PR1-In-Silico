@@ -1,0 +1,14 @@
+receptor = cleaned_7EW0.pdbqt
+ligand = JEU.pdbqt
+
+center_x = 107.075
+center_y = 112.817
+center_z = 74.658
+
+size_x = 17.5
+size_y = 7.0
+size_z = 19.0
+
+exhaustiveness = 8
+num_modes = 5
+out = 7EW0-JEU.pdbqt
